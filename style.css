@@ -581,4 +581,37 @@ section { padding: 80px 0; }
     .contact-watermark {
         opacity: 0.08; /* Make it even fainter on mobile */
     }
+    /* Target screens smaller than 768px (Tablets & Phones) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Remove the side gaps and allow full width */
+    body, html { margin: 0; padding: 0; overflow-x: hidden; }
+    .main-container, .container { 
+        width: 100%; 
+        max-width: 100%; 
+        margin: 0; 
+        padding: 0 15px; /* Only add small padding for text, not background */
+        border-radius: 0;
+    }
+
+    /* 2. Stack elements vertically (Fix the "arrangement") */
+    .row, .flex-container, .grid { 
+        display: flex; 
+        flex-direction: column; /* Stacks items on top of each other */
+    }
+
+    /* 3. Fix the header and menu */
+    .header { padding: 10px; }
+    
+    /* 4. Fix the Floating Buttons (Green/Orange) */
+    .floating-buttons, .fab-container {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        flex-direction: column; /* Stack them vertically so they don't overlap */
+        gap: 10px;
+        z-index: 999;
+    }
+}
 }
