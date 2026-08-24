@@ -202,14 +202,14 @@ section { padding: 80px 0; }
 .gallery { background: var(--white); }
 
 .gallery-grid {
-    display: grid;
+    display: block;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
 .gallery-item {
     border-radius: var(--radius-sm);
-    overflow: hidden;
+    overflow: visible;
     aspect-ratio: 1 / 1;
     
     /* Fallback background */
@@ -279,7 +279,7 @@ section { padding: 80px 0; }
 
 .gallery-item {
     border-radius: var(--radius-sm);
-    overflow: hidden;
+    overflow: visible;
     aspect-ratio: 1 / 1;
     
     /* Force it to be VISIBLE and load the image */
